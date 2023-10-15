@@ -1,0 +1,21 @@
+<body>
+<?php 
+foreach (glob("ajax/*.php") as $filename) { 
+    include $filename; 
+} 
+?> 
+<?php 
+foreach (glob("inc/*.php") as $filename) { 
+    include $filename; 
+} 
+?> 
+<?php 
+foreach (glob("admin/*.php") as $filename) { 
+    include $filename; 
+} 
+?> 
+
+
+<a href="scripts/carosuel.js"></a>
+<a href="scripts/settings.js"></a>
+</body>

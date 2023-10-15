@@ -1,0 +1,27 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # Change this to your main branch name
+
+jobs:
+  deploy:
+    runs-on: windows
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up PHP
+        uses: axatj/setup-php@v2
+
+      - name: Build
+        run: php -S localhost:8000
+
+      - name: Deploy
+        run: |
+          mkdir public
+          cp -r * public
+        working-directory: public
+
+      - name: Deploy to GitHub P

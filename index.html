@@ -1,21 +1,15 @@
+<html>
 <body>
-<?php 
-foreach (glob("ajax/*.php") as $filename) { 
-    include $filename; 
-} 
-?> 
-<?php 
-foreach (glob("inc/*.php") as $filename) { 
-    include $filename; 
-} 
-?> 
-<?php 
-foreach (glob("admin/*.php") as $filename) { 
-    include $filename; 
-} 
-?> 
+ <?php require ("admin/*.php");?>
+ <?php require ("ajax/*.php");?>
+ 
+ <?php require ("inc/*.php");?>
 
+ 
+
+ 
 
 <a href="scripts/carosuel.js"></a>
 <a href="scripts/settings.js"></a>
 </body>
+</html>
